@@ -11,12 +11,12 @@ import java.util.LinkedHashMap;
 
 public class Factorymap {
     public Map crear(int op) {
-        //primera opcion TreeMap
+        //primera opcion HashMap
         if (op == 1) {
-            return new TreeMap();
-        // segunda opcion HashMap
-        } else if (op == 2) {
             return new HashMap();
+        // segunda opcion TreeMap
+        } else if (op == 2) {
+            return new TreeMap();
         //tercera opcion LinkedHasgMap
         } else{
             return new LinkedHashMap();
