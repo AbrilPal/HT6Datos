@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Stream;
 
-public class Main {
+public class Maim {
 
     public static String archivo = "cards_desc.txt";
 
@@ -67,7 +67,7 @@ public class Main {
                 mainMap = factory.makeMap("LinkedHashMap");
                 collection = factory.makeMap("LinkedHashMap");
                 break;
-                }
+            }
 
             default:
                 mainMap = factory.makeMap("HashMap");
@@ -83,15 +83,10 @@ public class Main {
             switch (option) {
 
                 case 1: {
-                    //Pide al usuario ingresar el archivo de texto que desea convertir a map.
-                    System.out.print("Ingrese el archivo de texto que desea procesar: ");
-                    Scanner text = new Scanner(System.in);
-                    String userFile = text.nextLine();
-
                     try {
                         //Lectura del archivo de texto.
                         Stream<String> lines = Files.lines(
-                                Paths.get(userFile),
+                                Paths.get(archivo),
                                 StandardCharsets.UTF_8
                         );
                         //Para cada línea del arcivo de texto separa por "|" y se almacenan los datos en el Map.
@@ -294,3 +289,4 @@ public class Main {
 
     }
 }
+
