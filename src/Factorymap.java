@@ -10,16 +10,15 @@ import java.util.TreeMap;
 import java.util.LinkedHashMap;
 
 public class Factorymap {
-    public Map crear(int op) {
-        //primera opcion HashMap
-        if (op == 1) {
-            return new HashMap();
-        // segunda opcion TreeMap
-        } else if (op == 2) {
-            return new TreeMap();
-        //tercera opcion LinkedHasgMap
-        } else{
-            return new LinkedHashMap();
-        }
+
+    public Map<String, String> makeMap (String type) {
+        if (type.equals("HashMap")) {
+            return new HashMap<>();
+        } else if (type.equals("LinkedHashMap")) {
+            return new LinkedHashMap<>();
+        } else if (type.equals("TreeMap")) {
+            return new TreeMap<>();
+        } else
+            return new HashMap<>();
     }
 }
