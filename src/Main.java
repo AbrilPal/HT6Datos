@@ -50,28 +50,28 @@ public class Main {
         switch (mapType) {
             //Definir como ArrayPila
             case 1: {
-                mainMap = factory.crear(1);
-                collection = factory.crear(1);
+                mainMap = factory.makeMap("HashMap");
+                collection = factory.makeMap("HashMap");
                 break;
             }
 
             //Definir como VectorPila
             case 2: {
-                mainMap = factory.crear(2);
-                collection = factory.crear(2);
+                mainMap = factory.makeMap("TreeMap");
+                collection = factory.makeMap("TreeMap");
                 break;
             }
 
             //Definir como lista (elegir el tipo de lista).
             case 3: {
-                mainMap = factory.crear(3);
-                collection = factory.crear(3);
+                mainMap = factory.makeMap("LinkedHashMap");
+                collection = factory.makeMap("LinkedHashMap");
                 break;
                 }
 
             default:
-                mainMap = factory.crear(1);
-                collection = factory.crear(1);
+                mainMap = factory.makeMap("HashMap");
+                collection = factory.makeMap("HashMap");
                 break;
         }
 
